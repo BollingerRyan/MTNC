@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/home.css">
+    <title>Mohican Catering</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Mohican Top<br> Notch Catering</h1>
+        <img src="/static/Images/Mohican Top Notch Catering-logos_transparent.png" alt="Error">
+        <div class="header_right">
+            <a href="#">Contact</a>
+            <a href="#">View Menu</a>
+        </div>
+    </div>
+    <div class="main_body">
+        <h2>Our Goals</h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+            ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+            tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+            ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est
+            et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed,
+            commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+            condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec
+            non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id
+            cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
+            Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+            facilisis luctus, metus</p>
+        <h2>About Us</h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+            ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+            tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+            ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est
+            et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed,
+            commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+            condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec
+            non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id
+            cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
+            Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+            facilisis luctus, metus</p>
+        <h2>Location</h2>
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
+            ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
+            tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+            ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est
+            et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed,
+            commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+            condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec
+            non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id
+            cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
+            Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+            facilisis luctus, metus</p>
+    </div>
+    <div>
+        <h3 class="sstxt">Some of our Work</h3>
+        <img class="slideshow-image" src="/static/Images/1000000279.jpg" alt="">
+        <img class="slideshow-image" src="/static/Images/1000000281.jpg" alt="">
+        <img class="slideshow-image" src="/static/Images/1000000284.jpg" alt="">
+        <img class="slideshow-image" src="/static/Images/1000000315.jpg" alt="">
+        <img class="slideshow-image" src="/static/Images/1000000316.jpg" alt="">
+        <img class="slideshow-image" src="/static/Images/1000000320.jpg" alt="">
+    </div>
+    <div class="footer">
+        &copy; 2023 Mohican Top Notch Catering Company, Webiste Created by Ryan Bollinger 
+    </div>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.slideshow-image');
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                image.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }
+
+        // Initial setup
+        showImage(currentIndex);
+
+        // Automatic slideshow (change slide every 3 seconds)
+        setInterval(nextImage, 3000);
+    </script>
+</body>
+</html>
