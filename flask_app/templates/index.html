@@ -3,31 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/home.css">
-    <title>Mohican Catering</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>MTNC</title>
 </head>
 <body>
     <div class="header">
         <h1>Mohican Top<br> Notch Catering</h1>
-        <img src="/static/Images/Mohican Top Notch Catering-logos_transparent.png" alt="Error">
+        <img src="{{ url_for('static', filename='images/Mohican Top Notch Catering-logos_white.png') }}" alt="">
         <div class="header_right">
+            <a href="/services">Services</a>
             <a href="#">Contact</a>
             <a href="#">View Menu</a>
         </div>
     </div>
     <div class="main_body">
-        <h2>Our Goals</h2>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-            ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-            tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-            ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est
-            et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed,
-            commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-            condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec
-            non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id
-            cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat.
-            Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
-            facilisis luctus, metus</p>
         <h2>About Us</h2>
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
             ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
@@ -55,15 +44,15 @@
     </div>
     <div>
         <h3 class="sstxt">Some of our Work</h3>
-        <img class="slideshow-image" src="/static/Images/1000000279.jpg" alt="">
-        <img class="slideshow-image" src="/static/Images/1000000281.jpg" alt="">
-        <img class="slideshow-image" src="/static/Images/1000000284.jpg" alt="">
-        <img class="slideshow-image" src="/static/Images/1000000315.jpg" alt="">
-        <img class="slideshow-image" src="/static/Images/1000000316.jpg" alt="">
-        <img class="slideshow-image" src="/static/Images/1000000320.jpg" alt="">
+        <img class="slideshow-image" src="{{ url_for('static', filename='Images/1000000279.jpg') }}" alt="">
+        <img class="slideshow-image" src="{{ url_for('static', filename='Images/1000000281.jpg') }}" alt="">
+        <img class="slideshow-image" src="{{ url_for('static', filename='Images/1000000284.jpg') }}" alt="">
+        <img class="slideshow-image" src="{{ url_for('static', filename='Images/1000000315.jpg') }}" alt="">
+        <img class="slideshow-image" src="{{ url_for('static', filename='Images/1000000316.jpg') }}" alt="">
+        <img class="slideshow-image" src="{{ url_for('static', filename='Images/1000000320.jpg') }}" alt="">
     </div>
     <div class="footer">
-        &copy; 2023 Mohican Top Notch Catering Company, Webiste Created by Ryan Bollinger 
+        &copy; 2023 Mohican Top Notch Catering Company, Webiste Created by Ryan Bollinger, <a href="#">view privacy policy</a>
     </div>
     <script>
         let currentIndex = 0;
